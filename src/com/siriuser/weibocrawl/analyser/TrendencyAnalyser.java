@@ -39,7 +39,7 @@ public class TrendencyAnalyser {
 	private final int NS_THRESHOLD = 50;
 
 	/**
-	 * 整片文章分词Map
+	 * 整篇文章分词Map
 	 */
 	private Map<String, List<Word>> segments = null;
 	private List<Word> negs = null;

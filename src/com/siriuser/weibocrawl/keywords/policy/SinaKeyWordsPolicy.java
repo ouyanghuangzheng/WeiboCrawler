@@ -1,5 +1,13 @@
 package com.siriuser.weibocrawl.keywords.policy;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
+/**
+ *
+ * @author huangzheng
+ *
+ */
 public class SinaKeyWordsPolicy implements KeyWordsPolicy {
 
 	@Override
@@ -27,7 +35,12 @@ public class SinaKeyWordsPolicy implements KeyWordsPolicy {
 		}else {
 			keyWord = keyWordLine;
 		}
+        //新浪url进行了2次encode
 		return java.net.URLEncoder.encode(java.net.URLEncoder.encode(keyWord));
 	}
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.out.print(URLEncoder.encode("测试","utf-8"));
+    }
 
 }
